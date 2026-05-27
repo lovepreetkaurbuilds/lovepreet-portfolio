@@ -1,0 +1,363 @@
+You are a world-class portfolio designer, product designer, recruiter, software engineer, and storytelling expert.
+
+Build a COMPLETE portfolio website from scratch.
+
+Goal:
+Create a portfolio that immediately makes recruiters, founders, and hiring managers think:
+
+“This person actually builds things.”
+
+This must NOT look like a normal portfolio template.
+
+Owner:
+Lovepreet Kaur
+
+Positioning:
+Technology Builder • Systems Thinker • Practical Problem Solver
+
+Core identity:
+I learn deeply.
+I build practical projects.
+I connect software, systems, automation, AI, and real-world problems.
+
+Design philosophy:
+Minimal.
+Premium.
+Creative.
+Unique.
+High trust.
+Not flashy.
+
+Avoid:
+- Generic gradients
+- Neon hacker look
+- Too many animations
+- Portfolio templates
+- Fake startup language
+- Skill bars
+
+Visual style:
+White / ivory
+Black / deep navy
+Warm gray
+Subtle gold accents
+
+Typography:
+Elegant.
+Readable.
+Premium.
+
+Build these sections:
+
+────────────────
+LANDING EXPERIENCE
+────────────────
+
+Not a normal hero.
+
+Create a cinematic opening:
+
+Large statement:
+
+BUILD → TEST → IMPROVE → REPEAT
+
+Small text:
+Learning through projects.
+Building systems.
+Solving practical problems.
+
+Animated scroll indicator.
+
+Buttons:
+Explore Work
+View Journey
+
+Background:
+Subtle moving architecture/grid.
+
+────────────────
+SECTION 1 — WHO I AM
+────────────────
+
+Title:
+Not “About Me”
+
+Use:
+
+WHY I BUILD
+
+Content:
+Create an elegant narrative.
+
+Include:
+- Learn by building
+- Practical problem solving
+- Technology curiosity
+- Software
+- Systems
+- Automation
+- AI
+- Future technologies
+
+Add:
+Small illustrated timeline.
+
+────────────────
+SECTION 2 — BUILDER DASHBOARD
+────────────────
+
+This replaces normal skills.
+
+Create interactive cards:
+
+Things I Build
+
+Software
+Systems
+Automation
+Workflows
+AI
+Experiments
+
+Things I Use
+
+Python
+Git
+GitHub
+Linux
+Shell
+SQL
+FastAPI
+Docker
+
+Things I Practice
+
+Problem Solving
+Communication
+Learning
+Documentation
+
+No percentages.
+
+────────────────
+SECTION 3 — PROJECT LAB
+────────────────
+
+This is the main attraction.
+
+Design as an operating system dashboard.
+
+Each project opens its own experience.
+
+Project:
+Village Civic Issue Tracker
+
+Show:
+Problem
+Thinking
+Architecture
+Features
+Lessons
+Screenshots
+GitHub
+
+Project:
+CivicAid Linux Command Center
+
+Show:
+Commands
+Automation
+Logs
+Backups
+Monitoring
+Linux workflow
+
+Project:
+Dental Clinic Automation Demo
+
+Show:
+Journey:
+Lead
+→ Contact
+→ Booking
+→ Follow Up
+
+Project:
+Farm Fire Protection Concept
+
+Show:
+Problem
+Current systems
+Concept
+Future roadmap
+
+Add:
+Project metrics:
+Time invested
+Tools learned
+Technical challenges
+
+────────────────
+SECTION 4 — LEARNING ENGINE
+────────────────
+
+Interactive roadmap.
+
+Timeline:
+
+Learn
+↓
+
+Build
+↓
+
+Fail
+↓
+
+Improve
+↓
+
+Ship
+
+Show:
+Python
+Git
+Linux
+Projects
+French
+SQL
+FastAPI
+Docker
+AI
+
+Each opens details.
+
+────────────────
+SECTION 5 — HOW I THINK
+────────────────
+
+Unique section.
+
+Cards:
+
+How I approach problems
+
+Observe
+
+Break down
+
+Build
+
+Test
+
+Improve
+
+Document
+
+This section should feel memorable.
+
+────────────────
+SECTION 6 — CURRENT MISSION
+────────────────
+
+Display:
+
+2026 Focus
+
+Build portfolio projects
+
+Deep technical learning
+
+French (TEF Canada)
+
+Practical systems
+
+Technology for real problems
+
+Show progress style cards.
+
+────────────────
+SECTION 7 — WORK WITH ME
+────────────────
+
+Instead of contact.
+
+Include:
+
+Open To:
+Internships
+Graduate roles
+Software roles
+Automation projects
+Builder opportunities
+
+Buttons:
+LinkedIn
+GitHub
+Email
+
+────────────────
+EXTRA FEATURES
+────────────────
+
+Dark/light mode
+
+Keyboard navigation
+
+Smooth scroll
+
+Subtle interactions
+
+Project filtering
+
+Responsive
+
+SEO
+
+Performance optimized
+
+Resume download
+
+Accessibility
+
+Command palette (Ctrl+K)
+
+Visitor counter
+
+Professional loading screen
+
+No stock images
+
+No fake achievements
+
+Use placeholders where needed
+
+────────────────
+TECH STACK
+────────────────
+
+React
+TypeScript
+Tailwind
+Framer Motion
+
+Clean architecture.
+
+Create folders.
+
+Create components.
+
+Generate all code.
+
+Generate assets.
+
+Generate deployment instructions.
+
+Final result should feel like:
+
+Apple × Linear × Notion × GitHub × Personal Builder Journal
+
+NOT like a template.
+
+Recruiters should remember:
+“Oh yes — the builder portfolio.”
