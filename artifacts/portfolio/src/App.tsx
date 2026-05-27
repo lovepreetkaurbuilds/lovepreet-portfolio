@@ -3,18 +3,21 @@ import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ModeProvider } from "@/context/ModeContext";
 import LoadingScreen from "@/components/layout/LoadingScreen";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CommandPalette from "@/components/layout/CommandPalette";
 import Hero from "@/components/sections/Hero";
+import BuilderJourney from "@/components/sections/BuilderJourney";
 import WhyIBuild from "@/components/sections/WhyIBuild";
-import BuilderDashboard from "@/components/sections/BuilderDashboard";
+import BuilderToolkit from "@/components/sections/BuilderToolkit";
 import ProjectLab from "@/components/sections/ProjectLab";
+import WorkExperience from "@/components/sections/WorkExperience";
 import LearningEngine from "@/components/sections/LearningEngine";
 import HowIThink from "@/components/sections/HowIThink";
-import CurrentMission from "@/components/sections/CurrentMission";
-import WorkWithMe from "@/components/sections/WorkWithMe";
+import OpenToWork from "@/components/sections/OpenToWork";
+import Contact from "@/components/sections/Contact";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -40,13 +43,15 @@ function Portfolio() {
       <CommandPalette open={commandOpen} onClose={() => setCommandOpen(false)} />
       <main>
         <Hero />
+        <BuilderJourney />
         <WhyIBuild />
-        <BuilderDashboard />
+        <BuilderToolkit />
         <ProjectLab />
+        <WorkExperience />
         <LearningEngine />
         <HowIThink />
-        <CurrentMission />
-        <WorkWithMe />
+        <OpenToWork />
+        <Contact />
       </main>
       <Footer />
     </div>
@@ -65,13 +70,15 @@ function Router() {
 function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="lk-portfolio-theme">
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-            <Router />
-          </WouterRouter>
-        </TooltipProvider>
-      </QueryClientProvider>
+      <ModeProvider>
+        <QueryClientProvider client={queryClient}>
+          <TooltipProvider>
+            <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+              <Router />
+            </WouterRouter>
+          </TooltipProvider>
+        </QueryClientProvider>
+      </ModeProvider>
     </ThemeProvider>
   );
 }

@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "@/components/theme-provider";
+import { useMode } from "@/context/ModeContext";
 import { Moon, Sun, Command } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Why I Build", href: "#why-i-build" },
-  { label: "Stack", href: "#builder-dashboard" },
+  { label: "Journey", href: "#builder-journey" },
   { label: "Projects", href: "#project-lab" },
-  { label: "Journey", href: "#learning-engine" },
-  { label: "Contact", href: "#work-with-me" },
+  { label: "Toolkit", href: "#builder-toolkit" },
+  { label: "Experience", href: "#work-experience" },
+  { label: "Contact", href: "#contact" },
 ];
 
 interface NavbarProps {
@@ -17,6 +18,7 @@ interface NavbarProps {
 
 export default function Navbar({ onCommandPalette }: NavbarProps) {
   const { theme, setTheme } = useTheme();
+  const { mode, setMode } = useMode();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -29,12 +31,11 @@ export default function Navbar({ onCommandPalette }: NavbarProps) {
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
     const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
+  const toggleMode = () => setMode(mode === "builder" ? "recruiter" : "builder");
 
   return (
     <motion.header
@@ -42,9 +43,7 @@ export default function Navbar({ onCommandPalette }: NavbarProps) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
+        scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -56,20 +55,34 @@ export default function Navbar({ onCommandPalette }: NavbarProps) {
           LK
         </button>
 
-        <nav className="hidden md:flex items-center gap-8" data-testid="nav-links">
+        <nav className="hidden md:flex items-center gap-6" data-testid="nav-links">
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors font-sans tracking-wide"
-              data-testid={`nav-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors font-sans"
+              data-testid={`nav-link-${link.label.toLowerCase()}`}
             >
               {link.label}
             </button>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
+          {/* Mode toggle */}
+          <button
+            onClick={toggleMode}
+            className={`hidden md:flex items-center gap-1.5 text-xs px-2.5 py-1 rounded border transition-all duration-200 ${
+              mode === "recruiter"
+                ? "border-accent/50 text-accent bg-accent/10"
+                : "border-border text-muted-foreground hover:border-accent hover:text-accent"
+            }`}
+            data-testid="nav-mode-toggle"
+            title={mode === "builder" ? "Switch to Recruiter View" : "Switch to Builder View"}
+          >
+            {mode === "recruiter" ? "Recruiter View" : "Builder View"}
+          </button>
+
           <button
             onClick={onCommandPalette}
             className="hidden md:flex items-center gap-1.5 text-xs text-muted-foreground border border-border rounded px-2 py-1 hover:border-accent hover:text-foreground transition-all"
@@ -79,6 +92,7 @@ export default function Navbar({ onCommandPalette }: NavbarProps) {
             <Command size={12} />
             <span>K</span>
           </button>
+
           <button
             onClick={toggleTheme}
             className="w-8 h-8 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
@@ -87,6 +101,7 @@ export default function Navbar({ onCommandPalette }: NavbarProps) {
           >
             {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>
+
           <button
             className="md:hidden text-muted-foreground hover:text-foreground"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -120,6 +135,14 @@ export default function Navbar({ onCommandPalette }: NavbarProps) {
                   {link.label}
                 </button>
               ))}
+              <button
+                onClick={() => { toggleMode(); setMobileOpen(false); }}
+                className={`text-sm text-left px-3 py-1.5 rounded border w-fit transition-all ${
+                  mode === "recruiter" ? "border-accent text-accent" : "border-border text-muted-foreground"
+                }`}
+              >
+                {mode === "recruiter" ? "Recruiter View" : "Builder View"}
+              </button>
             </nav>
           </motion.div>
         )}

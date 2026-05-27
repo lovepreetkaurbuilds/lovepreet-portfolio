@@ -1,0 +1,886 @@
+You are a world-class full-stack developer, portfolio designer, recruiter, UX designer, and storytelling expert.
+
+Your task:
+Build or update my complete personal portfolio website from start to end.
+
+This portfolio is for:
+- Jobs
+- Internships
+- Entry-level software roles
+- Developer roles
+- Technical support / IT roles
+- Automation projects
+- Future builder/startup identity
+
+Important:
+This website must be unique, creative, memorable, and professional.
+It must stand out from normal portfolio templates.
+But it must also be 100% truthful.
+
+Do NOT exaggerate.
+Do NOT make fake achievements.
+Do NOT show unfinished things as completed.
+Do NOT use fake metrics.
+Do NOT use fake testimonials.
+Do NOT use fake company logos.
+Do NOT make me sound like a senior expert.
+Make me look like a serious, hardworking, practical builder who is growing through education, Canadian work experience, self-learning, and real projects.
+
+Owner:
+Lovepreet Kaur
+
+Core positioning:
+Technology Builder in Progress
+Software • Systems • Automation • AI • Real-World Problem Solving
+
+Main portfolio message:
+I studied computer programming.
+I worked real jobs in Canada.
+I learned responsibility, communication, customer service, safety, inventory, and operations.
+Now I am building technical projects and growing into software, systems, automation, AI, and real-world problem-solving work.
+
+Tone:
+Confident but humble.
+Professional but creative.
+Recruiter-friendly.
+Builder-focused.
+Not childish.
+Not generic.
+Not fake-startup style.
+
+Design goal:
+The website should feel like:
+Apple × Linear × Notion × GitHub × Personal Builder Journal
+
+It should NOT look like a normal template portfolio.
+
+Visual style:
+- Clean ivory / white background
+- Deep navy / black text
+- Warm gray sections
+- Subtle gold or beige accents
+- Premium typography
+- Smooth animations
+- Soft shadows
+- Rounded cards
+- Mobile responsive
+- Fast loading
+- Accessible
+- SEO optimized
+
+Tech stack:
+Use React, TypeScript, Tailwind CSS, and Framer Motion.
+Create clean components and folder structure.
+Include clear instructions to run and deploy on Replit.
+
+Real links to use everywhere:
+
+LinkedIn:
+https://www.linkedin.com/in/lovepreetkaur10
+
+GitHub:
+https://github.com/lovepreetkaurbuilds
+
+Email:
+lovepreetkaur090gsp@gmail.com
+
+Important:
+- Use these real links in the hero buttons.
+- Use these real links in the Open To Work section.
+- Use these real links in the Contact section.
+- Use these real links in the footer.
+- Do not use placeholder LinkedIn, GitHub, or email links.
+- LinkedIn and GitHub should open in a new tab.
+- Email button should use:
+mailto:lovepreetkaur090gsp@gmail.com
+
+Privacy:
+Do NOT display my home address.
+Do NOT display my phone number publicly.
+Only show email, LinkedIn, and GitHub.
+
+────────────────────────
+SECTION 1 — CINEMATIC HERO
+────────────────────────
+
+Do not create a boring normal hero section.
+
+Create a memorable opening.
+
+Main headline:
+Building Practical Technology Through Learning, Work, and Real Projects
+
+Subheadline:
+I am a Computer Programmer graduate who is building skills through software projects, systems practice, automation experiments, and real-world problem solving.
+
+Add rotating keywords:
+Software
+Systems
+Automation
+AI
+Problem Solving
+Self-Learning
+Documentation
+Real Projects
+
+Hero buttons:
+- View My Work
+- See My Journey
+- GitHub
+- LinkedIn
+- Contact Me
+
+Button behavior:
+GitHub button:
+https://github.com/lovepreetkaurbuilds
+
+LinkedIn button:
+https://www.linkedin.com/in/lovepreetkaur10
+
+Contact button:
+mailto:lovepreetkaur090gsp@gmail.com
+
+Visual idea:
+Use a subtle animated background:
+- Clean system grid
+- Soft moving nodes
+- Builder map
+- Project flow lines
+
+No neon hacker design.
+No childish design.
+No loud gradients.
+
+────────────────────────
+SECTION 2 — THE BUILDER JOURNEY
+────────────────────────
+
+This section must be unique and truthful.
+
+Title:
+The Builder Journey
+
+Create a beautiful timeline.
+It can be vertical, horizontal, or interactive.
+
+Use these exact journey points:
+
+2019 – 2021
+High School Foundation
+
+Description:
+Completed high school education in Punjab, India.
+Built academic foundation, discipline, communication, and early learning habits.
+
+2022
+IELTS / English Preparation
+
+Description:
+Cleared IELTS with CLB 7-level English ability.
+Prepared for studying and working in Canada.
+
+Jan 2023 – Aug 2024
+Computer Programmer Diploma
+
+Description:
+Completed Computer Programmer Diploma at Lambton College, Mississauga.
+GPA: 3.6 / 4.0.
+Built foundation in programming, computer systems, and technical problem solving.
+
+2023 – 2025
+Canadian Work Experience
+
+Description:
+Worked in multiple roles while studying and after graduation in Canada.
+Built real-world discipline through customer service, retail, warehouse operations, inventory handling, safety procedures, POS systems, RF scanners, WMS, teamwork, communication, and fast-paced work environments.
+
+Include these roles:
+- Customer Service Representative — Thiara Supermarket
+- Production Associate — Give and Go Bakery
+- Product Process Specialist — Best Buy Canada
+- Receiving Associate — Best Buy
+- Ride Operator — Canada’s Wonderland
+- Full Case Associate — Best Buy
+
+Sept 2024
+Academic Recognition
+
+Description:
+Received Dean’s Award for Academic Excellence.
+Also include Dean’s Honour List.
+
+2025 – 2028
+Canadian Work Permit Phase
+
+Description:
+Received valid Canadian work authorization / work permit.
+Using this phase for career growth, technical learning, project building, and professional preparation.
+
+2026
+Technical Builder Roadmaps Begin
+
+Description:
+Started focused technical roadmaps in:
+- Python
+- Git and GitHub
+- Linux and Shell
+- SQL
+- PostgreSQL
+- FastAPI
+- Docker
+- AI and automation
+- French for TEF Canada
+- Real-world problem-solving projects
+
+Important:
+Show 2026 items as current focus or in progress.
+Do not show them as all completed.
+
+Design:
+Make this section feel like a life/career map, not a basic resume list.
+
+────────────────────────
+SECTION 3 — WHY I BUILD
+────────────────────────
+
+Title:
+Why I Build
+
+Use this content:
+
+I enjoy learning and building technology through projects and practical problem solving.
+
+My interests span software, systems, automation, AI, and emerging technologies. I prefer learning by building and turning ideas into working solutions rather than only studying theory.
+
+I am interested in creating technology that solves real-world problems and contributes to making systems more efficient, accessible, and transparent. I enjoy exploring how technology can improve the way people work, make decisions, and interact with services and information.
+
+Add personal line:
+Outside technology, I enjoy horses, cats, badminton, cricket, and travelling.
+
+Design:
+Make this section warm, human, thoughtful, and professional.
+
+────────────────────────
+SECTION 4 — BUILDER TOOLKIT
+────────────────────────
+
+Title:
+My Builder Toolkit
+
+Subtitle:
+A practical toolkit built from education, real work experience, self-learning, and project-based execution.
+
+Important:
+Do not show all skills as equal.
+Separate them honestly into:
+- Used in projects
+- Used in work experience
+- Currently learning
+- Exploring
+- Personal strengths
+
+Do NOT use percentage bars.
+Use clean tags, cards, or an interactive dashboard.
+Recruiters should clearly understand what I have used, what I learned from work, and what I am currently building.
+
+Category 1:
+Programming & Software Foundations
+
+Skills:
+- Python
+- Programming fundamentals
+- Problem solving with code
+- Debugging
+- CLI applications
+- File handling
+- Basic testing
+- pytest
+- Git
+- GitHub
+- GitHub Actions
+- VS Code
+- Documentation
+- README writing
+
+Label:
+Used in projects
+
+Category 2:
+Systems & Command-Line Skills
+
+Skills:
+- Linux
+- Ubuntu / WSL
+- Shell scripting
+- Bash commands
+- File system navigation
+- Permissions
+- Logs
+- Backups
+- cron jobs
+- grep
+- awk
+- sed
+- Command-line workflows
+- Basic server health checks
+
+Label:
+Used in Linux project
+
+Category 3:
+Backend & Deployment Learning
+
+Skills:
+- SQL
+- PostgreSQL
+- FastAPI
+- Docker
+- APIs
+- Databases
+- Backend systems
+- Deployment basics
+
+Label:
+Currently learning / building next
+
+Important:
+Do not present these as expert-level.
+Show them as active learning and current roadmap.
+
+Category 4:
+AI, Automation & Future Technology Interests
+
+Skills:
+- AI tools
+- Workflow automation
+- Business process automation
+- Lead capture systems
+- Appointment booking systems
+- AI chatbot concepts
+- IoT concepts
+- Sensor-based problem solving
+- AI + BCI interest
+- Real-world technology systems
+
+Label:
+Exploring / building through projects
+
+Category 5:
+Web & Product Building
+
+Skills:
+- Replit
+- Mobile-friendly web apps
+- Landing page structure
+- Forms
+- Booking flow concepts
+- User journey thinking
+- Basic UI/UX thinking
+- Product demo building
+
+Label:
+Used in demos / improving
+
+Category 6:
+Workplace & Operations Tools
+
+Skills:
+- POS systems
+- Cash handling
+- RF scanners
+- WMS
+- Inventory management
+- Order processing
+- Shipment receiving
+- Stock organization
+- Product labeling
+- Data entry
+- Email
+- MS Word
+- MS Excel
+- MS PowerPoint
+
+Label:
+Used in Canadian work experience
+
+Category 7:
+Customer, Safety & Real-World Work Skills
+
+Skills:
+- Customer service
+- Retail sales
+- Customer engagement
+- Active listening
+- Clear communication
+- Safety procedures
+- Guest instructions
+- Fast-paced operations
+- Teamwork
+- Time management
+- Multitasking
+- Attention to detail
+- Adaptability
+- Responsibility
+- Problem solving
+
+Label:
+Built through real jobs
+
+Category 8:
+Languages & Communication
+
+Skills:
+- English
+- Hindi
+- Punjabi
+- French learning for TEF Canada
+- Presentation confidence
+- Cross-cultural communication
+
+Label:
+Communication toolkit
+
+Category 9:
+Builder Traits
+
+Skills:
+- Self-learning
+- Curiosity
+- Consistency
+- Practical execution
+- Documentation habit
+- Learning by building
+- Long-term thinking
+- Real-world problem focus
+- Improvement mindset
+
+Label:
+Personal working style
+
+Design instructions:
+Make this section look like a real operating system of my skills, not a generic skills list.
+
+────────────────────────
+SECTION 5 — PROJECT LAB
+────────────────────────
+
+This should be the main attraction of the website.
+
+Title:
+Project Lab
+
+Subtitle:
+A collection of projects and systems I am building to learn deeply and solve practical problems.
+
+Create project cards with filters:
+- Software
+- Systems
+- Automation
+- AI / IoT Concepts
+- In Progress
+- Completed
+
+Project 1:
+Village Civic Issue Tracker
+
+Status:
+Completed / Portfolio Project
+
+Description:
+A Python CLI project for tracking local civic issues such as roads, water, electricity, sanitation, and public problems.
+
+Tech:
+Python, Git, GitHub, pytest, GitHub Actions
+
+Features:
+- Add issues
+- List issues
+- Update issue status
+- Search issues
+- View open issues
+- Priority report
+- Testing
+- CI workflow
+
+Show inside project modal:
+- Problem
+- What I built
+- Tools used
+- Features
+- What I learned
+- Current status
+- Next improvement
+- GitHub link placeholder
+
+Project 2:
+CivicAid Linux Command Center
+
+Status:
+Completed / Portfolio Project
+
+Description:
+A Linux and shell scripting project that simulates real system operations such as logs, backups, reports, automation, command-line workflows, and server health checks.
+
+Tech:
+Linux, Shell Scripting, WSL, cron, grep, awk, sed, GitHub
+
+Show:
+- Command-line practice
+- Automation scripts
+- Logging
+- Backup reports
+- Server simulation
+- Text processing
+- System checks
+- What I learned
+- GitHub link placeholder
+
+Project 3:
+Dubai Smile Dental Clinic Automation Demo
+
+Status:
+Prototype / Demo
+
+Description:
+A lead-to-booking automation demo for a dental clinic, showing how local businesses can capture leads, respond faster, and manage appointment interest.
+
+Tech:
+Replit, web app, forms, booking flow, automation concept
+
+Show flow:
+Visitor
+→ Lead form
+→ Service interest
+→ Booking request
+→ Follow-up concept
+
+Show:
+- Problem
+- Demo purpose
+- User journey
+- What I learned
+- Future improvements
+- Live demo placeholder
+
+Project 4:
+Farm Fire Protection System Concept
+
+Status:
+Research / Concept / Future Build
+
+Description:
+A technology concept focused on protecting farms from crop fires caused by electric wire sparks and fire spreading from nearby fields.
+
+Important:
+Do NOT present this as fully built.
+Present it as a future real-world problem-solving project.
+
+Show:
+- Problem
+- Why it matters
+- Current concept
+- Possible technologies
+- Future roadmap
+
+Tech ideas:
+IoT sensors, alerts, automation, AI-assisted monitoring, power cutoff concept
+
+────────────────────────
+SECTION 6 — WORK EXPERIENCE MAP
+────────────────────────
+
+Make this section creative.
+
+Title:
+Work Experience That Built My Foundation
+
+Do not just list jobs.
+Show what each job taught me.
+
+Create cards:
+
+Customer Service
+Learned communication, patience, active listening, and helping people clearly.
+
+Retail & Inventory
+Learned stock handling, POS systems, order processing, product accuracy, and customer experience.
+
+Warehouse & Receiving
+Learned RF scanners, WMS, shipment processing, inventory accuracy, and fast-paced operations.
+
+Ride Operations
+Learned safety procedures, responsibility, clear instructions, and calm decision-making.
+
+Production Work
+Learned quality control, packaging, routine discipline, and teamwork.
+
+Message:
+These experiences gave me real-world discipline before and during my transition into deeper technology building.
+
+Also include a compact job timeline:
+- Customer Service Representative — Thiara Supermarket
+- Production Associate — Give and Go Bakery
+- Product Process Specialist — Best Buy Canada
+- Receiving Associate — Best Buy
+- Ride Operator — Canada’s Wonderland
+- Full Case Associate — Best Buy
+
+────────────────────────
+SECTION 7 — LEARNING ENGINE
+────────────────────────
+
+Title:
+My Learning Engine
+
+Create an interactive system diagram:
+
+Study
+→ Practice
+→ Build
+→ Debug
+→ Document
+→ Improve
+→ Ship
+
+Current 2026 focus:
+- Python depth
+- Git / GitHub portfolio
+- Linux / Shell scripting
+- SQL / PostgreSQL
+- FastAPI
+- Docker
+- AI and automation
+- French for TEF Canada
+- Real-world project building
+
+Important:
+This section should show how I learn, not just what I learn.
+
+────────────────────────
+SECTION 8 — HOW I THINK
+────────────────────────
+
+Title:
+How I Approach Problems
+
+Use beautiful cards:
+
+1. Observe the real problem
+2. Break it into smaller parts
+3. Understand the people affected
+4. Build a simple version
+5. Test and improve
+6. Document the process
+7. Keep learning
+
+This section should help recruiters see how I think, not just what tools I know.
+
+────────────────────────
+SECTION 9 — OPEN TO WORK
+────────────────────────
+
+Title:
+Open To Opportunities
+
+Mention:
+I am open to:
+- Entry-level software roles
+- Junior developer roles
+- Technical support / IT roles
+- Automation projects
+- Backend learning opportunities
+- Internship opportunities
+- Builder-focused teams
+- Local business automation projects
+
+Tone:
+Do not make it sound like I am already a senior expert.
+Show that I am hardworking, practical, adaptable, and building proof through projects.
+
+Buttons:
+- Download Resume
+- GitHub
+- LinkedIn
+- Email Me
+
+Button links:
+GitHub:
+https://github.com/lovepreetkaurbuilds
+
+LinkedIn:
+https://www.linkedin.com/in/lovepreetkaur10
+
+Email:
+mailto:lovepreetkaur090gsp@gmail.com
+
+Resume:
+Use placeholder file name:
+Lovepreet_Kaur_Resume.pdf
+
+If resume file is not uploaded yet, show a disabled or placeholder resume button with text:
+Resume coming soon
+
+────────────────────────
+SECTION 10 — CONTACT
+────────────────────────
+
+Name:
+Lovepreet Kaur
+
+Email:
+lovepreetkaur090gsp@gmail.com
+
+LinkedIn:
+https://www.linkedin.com/in/lovepreetkaur10
+
+GitHub:
+https://github.com/lovepreetkaurbuilds
+
+Add contact buttons:
+- Email Me
+- LinkedIn
+- GitHub
+
+Button behavior:
+- Email Me should open mailto:lovepreetkaur090gsp@gmail.com
+- LinkedIn should open https://www.linkedin.com/in/lovepreetkaur10 in a new tab
+- GitHub should open https://github.com/lovepreetkaurbuilds in a new tab
+
+Add contact form:
+- Name
+- Email
+- Message
+- Submit
+
+Important:
+If the contact form is not connected to a backend yet, show a professional message after submit:
+“Thank you for your message. I will get back to you soon.”
+
+Do not fake actual email sending unless a backend/email service is connected.
+
+────────────────────────
+SECTION 11 — FOOTER
+────────────────────────
+
+Footer text:
+Built by Lovepreet Kaur
+
+Small line:
+Technology, systems, automation, and real-world problem solving.
+
+Include:
+- Email
+- LinkedIn
+- GitHub
+
+Use real links:
+Email:
+mailto:lovepreetkaur090gsp@gmail.com
+
+LinkedIn:
+https://www.linkedin.com/in/lovepreetkaur10
+
+GitHub:
+https://github.com/lovepreetkaurbuilds
+
+────────────────────────
+SPECIAL FEATURES
+────────────────────────
+
+Add these features:
+
+1. Command Palette
+Press Ctrl + K to navigate:
+- Journey
+- Projects
+- Toolkit
+- Work Experience
+- Resume
+- Contact
+
+2. Project Modal
+When clicking a project, open detailed project story:
+- Problem
+- What I built
+- Tools used
+- What I learned
+- Current status
+- Next improvement
+
+3. Resume Download Button
+Use placeholder file:
+Lovepreet_Kaur_Resume.pdf
+
+4. Dark Mode
+Add professional dark mode.
+
+5. Recruiter Mode Toggle
+Add a button:
+Recruiter View
+
+When clicked, show a concise recruiter-friendly summary:
+- Education
+- Work experience
+- Technical projects
+- Skills
+- Contact
+
+6. Builder Mode Toggle
+When clicked, show deeper storytelling:
+- Why I build
+- Project thinking
+- Learning journey
+- Future direction
+
+7. Project Filtering
+Allow filtering projects by:
+- Software
+- Systems
+- Automation
+- AI / IoT Concept
+- Completed
+- In Progress
+
+8. Smooth Scroll
+Use smooth scrolling for navigation.
+
+9. Responsive Design
+Must look good on:
+- Mobile
+- Tablet
+- Desktop
+
+10. Accessibility
+Use:
+- Proper contrast
+- Keyboard navigation
+- Alt text where needed
+- Semantic HTML
+
+Do NOT add:
+- Fake visitor counter
+- Fake testimonials
+- Fake company logos
+- Fake certifications
+- Fake client results
+- Fake income numbers
+- Fake project metrics
+
+────────────────────────
+FINAL REQUIREMENTS
+────────────────────────
+
+Build the full website from start to end.
+Generate all code.
+Create clean components.
+Make it responsive.
+Make it visually unique.
+Make it professional for jobs.
+Add comments where helpful.
+Use real LinkedIn, GitHub, and email links.
+Use placeholders only where exact project links or resume file are missing.
+Include instructions to run and deploy on Replit.
+
+Final result should make recruiters think:
+
+“She may still be growing, but she is serious, practical, hardworking, and already building real proof.”

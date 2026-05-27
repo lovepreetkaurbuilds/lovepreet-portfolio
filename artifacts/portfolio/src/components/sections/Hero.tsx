@@ -1,18 +1,30 @@
-import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 
-const words = ["BUILD", "TEST", "IMPROVE", "REPEAT"];
+const rotatingKeywords = [
+  "Software", "Systems", "Automation", "AI",
+  "Problem Solving", "Self-Learning", "Documentation", "Real Projects"
+];
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [kwIndex, setKwIndex] = useState(0);
 
+  // Rotate keywords
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setKwIndex((i) => (i + 1) % rotatingKeywords.length);
+    }, 2000);
+    return () => clearInterval(timer);
+  }, []);
+
+  // Animated grid background
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-
     let animFrame: number;
     let time = 0;
 
@@ -30,164 +42,146 @@ export default function Hero() {
       const w = canvas.offsetWidth;
       const h = canvas.offsetHeight;
       ctx.clearRect(0, 0, w, h);
-      const gridSize = 48;
-      const color = isDark() ? "rgba(255,255,255,0.04)" : "rgba(0,0,0,0.04)";
-      ctx.strokeStyle = color;
+      const gs = 40;
+      ctx.strokeStyle = isDark() ? "rgba(255,255,255,0.04)" : "rgba(0,0,0,0.04)";
       ctx.lineWidth = 1;
-      for (let x = 0; x < w + gridSize; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, h);
-        ctx.stroke();
+      for (let x = 0; x < w + gs; x += gs) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
       }
-      for (let y = 0; y < h + gridSize; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(w, y);
-        ctx.stroke();
+      for (let y = 0; y < h + gs; y += gs) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
       }
-      // subtle moving dot
-      const dotColor = isDark() ? "rgba(201,168,76,0.15)" : "rgba(201,168,76,0.12)";
-      const cx = (w / 2) + Math.sin(time * 0.3) * 80;
-      const cy = (h / 2) + Math.cos(time * 0.2) * 60;
-      const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, 300);
-      grad.addColorStop(0, dotColor);
+      // Moving gold glow
+      const cx = (w / 2) + Math.sin(time * 0.25) * 100;
+      const cy = (h / 2) + Math.cos(time * 0.18) * 70;
+      const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, 350);
+      grad.addColorStop(0, isDark() ? "rgba(201,168,76,0.12)" : "rgba(201,168,76,0.09)");
       grad.addColorStop(1, "transparent");
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, w, h);
-      time += 0.01;
+      time += 0.008;
       animFrame = requestAnimationFrame(draw);
     };
     draw();
-    return () => {
-      window.removeEventListener("resize", resize);
-      cancelAnimationFrame(animFrame);
-    };
+    return () => { window.removeEventListener("resize", resize); cancelAnimationFrame(animFrame); };
   }, []);
 
-  const scrollToWork = () => {
-    document.querySelector("#why-i-build")?.scrollIntoView({ behavior: "smooth" });
-  };
-  const scrollToJourney = () => {
-    document.querySelector("#learning-engine")?.scrollIntoView({ behavior: "smooth" });
-  };
-  const scrollDown = () => {
-    document.querySelector("#why-i-build")?.scrollIntoView({ behavior: "smooth" });
-  };
+  const scroll = (id: string) => document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
-    >
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-      />
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        {/* Animated statement */}
+        {/* Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-8"
-        >
-          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-5">
-            {words.map((word, i) => (
-              <motion.span
-                key={word}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.8 + i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-center gap-3 md:gap-5"
-              >
-                <span className="font-serif font-bold text-5xl md:text-7xl lg:text-8xl text-foreground tracking-tight leading-none">
-                  {word}
-                </span>
-                {i < words.length - 1 && (
-                  <motion.span
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3, delay: 2.0 + i * 0.12 }}
-                    className="text-2xl md:text-4xl text-accent font-light"
-                  >
-                    →
-                  </motion.span>
-                )}
-              </motion.span>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Subtext */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 2.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-3"
-        >
-          <p className="text-xl md:text-2xl font-serif text-foreground/70 italic">
-            Learning through projects.
-          </p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 2.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-3"
-        >
-          <p className="text-xl md:text-2xl font-serif text-foreground/70 italic">
-            Building systems.
-          </p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 2.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-12"
-        >
-          <p className="text-xl md:text-2xl font-serif text-foreground/70 italic">
-            Solving practical problems.
-          </p>
-        </motion.div>
-
-        {/* Name badge */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 2.1 }}
-          className="mb-10"
+          transition={{ duration: 0.5, delay: 1.8 }}
+          className="mb-8 flex justify-center"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 border border-accent/30 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             <span className="text-xs font-sans text-muted-foreground tracking-widest uppercase">
-              Lovepreet Kaur — Technology Builder
+              Computer Programmer Graduate · Open to Work · Canada
             </span>
           </div>
         </motion.div>
 
-        {/* CTAs */}
+        {/* Main headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 2.0, ease: [0.16, 1, 0.3, 1] }}
+          className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight mb-6"
+        >
+          Building Practical Technology
+          <br />
+          <span className="text-foreground/70">Through Learning, Work,</span>
+          <br />
+          <span className="text-foreground/70">and Real Projects</span>
+        </motion.h1>
+
+        {/* Rotating keyword */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 2.3 }}
+          className="h-10 flex items-center justify-center mb-4"
+        >
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={kwIndex}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="font-serif text-2xl md:text-3xl font-semibold text-accent"
+            >
+              {rotatingKeywords[kwIndex]}
+            </motion.span>
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Subheadline */}
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 2.4, ease: [0.16, 1, 0.3, 1] }}
+          className="text-lg md:text-xl text-muted-foreground font-sans leading-relaxed max-w-2xl mx-auto mb-12"
+        >
+          I am a Computer Programmer graduate building skills through software projects, systems practice, automation experiments, and real-world problem solving.
+        </motion.p>
+
+        {/* CTA buttons */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 2.75, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          transition={{ duration: 0.7, delay: 2.6, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-wrap items-center justify-center gap-3"
         >
           <button
-            onClick={scrollToWork}
-            className="px-8 py-3.5 bg-foreground text-background font-sans text-sm tracking-wide hover:bg-foreground/90 transition-all duration-200 rounded"
-            data-testid="hero-explore-work"
+            onClick={() => scroll("#project-lab")}
+            className="px-7 py-3 bg-foreground text-background font-sans text-sm tracking-wide hover:bg-foreground/90 transition-all rounded"
+            data-testid="hero-view-work"
           >
-            Explore Work
+            View My Work
           </button>
           <button
-            onClick={scrollToJourney}
-            className="px-8 py-3.5 border border-border text-foreground font-sans text-sm tracking-wide hover:border-accent hover:text-accent transition-all duration-200 rounded"
-            data-testid="hero-view-journey"
+            onClick={() => scroll("#builder-journey")}
+            className="px-7 py-3 border border-border text-foreground font-sans text-sm tracking-wide hover:border-accent hover:text-accent transition-all rounded"
+            data-testid="hero-see-journey"
           >
-            View Journey
+            See My Journey
           </button>
+          <a
+            href="https://github.com/lovepreetkaurbuilds"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-3 border border-border text-muted-foreground font-sans text-sm hover:border-foreground hover:text-foreground transition-all rounded"
+            data-testid="hero-github"
+          >
+            <Github size={14} />
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/lovepreetkaur10"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-3 border border-border text-muted-foreground font-sans text-sm hover:border-foreground hover:text-foreground transition-all rounded"
+            data-testid="hero-linkedin"
+          >
+            <Linkedin size={14} />
+            LinkedIn
+          </a>
+          <a
+            href="mailto:lovepreetkaur090gsp@gmail.com"
+            className="flex items-center gap-2 px-5 py-3 border border-border text-muted-foreground font-sans text-sm hover:border-foreground hover:text-foreground transition-all rounded"
+            data-testid="hero-email"
+          >
+            <Mail size={14} />
+            Contact Me
+          </a>
         </motion.div>
       </div>
 
@@ -195,8 +189,8 @@ export default function Hero() {
       <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 3.2 }}
-        onClick={scrollDown}
+        transition={{ duration: 0.6, delay: 3.1 }}
+        onClick={() => scroll("#builder-journey")}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
         data-testid="hero-scroll-indicator"
       >

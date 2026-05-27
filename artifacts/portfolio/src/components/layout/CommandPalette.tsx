@@ -1,22 +1,26 @@
 import { useEffect } from "react";
 import { Command } from "cmdk";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Hash, Github, Mail, Linkedin } from "lucide-react";
+import { Search, Hash, Github, Mail, Linkedin, Download } from "lucide-react";
 
 const sections = [
+  { id: "hero", label: "Home", description: "Back to top" },
+  { id: "builder-journey", label: "Journey", description: "Education & timeline" },
   { id: "why-i-build", label: "Why I Build", description: "About Lovepreet" },
-  { id: "builder-dashboard", label: "Builder Dashboard", description: "Skills and tools" },
-  { id: "project-lab", label: "Project Lab", description: "Projects" },
-  { id: "learning-engine", label: "Learning Engine", description: "Journey" },
-  { id: "how-i-think", label: "How I Think", description: "Process" },
-  { id: "current-mission", label: "Current Mission", description: "2026 Focus" },
-  { id: "work-with-me", label: "Work With Me", description: "Contact" },
+  { id: "builder-toolkit", label: "Toolkit", description: "Skills and tools" },
+  { id: "project-lab", label: "Projects", description: "Project Lab" },
+  { id: "work-experience", label: "Work Experience", description: "Canadian work history" },
+  { id: "learning-engine", label: "Learning Engine", description: "How I learn" },
+  { id: "how-i-think", label: "How I Think", description: "Problem solving approach" },
+  { id: "open-to-work", label: "Open To Work", description: "Opportunities" },
+  { id: "contact", label: "Contact", description: "Get in touch" },
 ];
 
 const links = [
-  { label: "GitHub", href: "https://github.com/lovepreetkaur", icon: Github },
-  { label: "LinkedIn", href: "https://linkedin.com/in/lovepreetkaur", icon: Linkedin },
-  { label: "Email", href: "mailto:lovepreetkaur@email.com", icon: Mail },
+  { label: "GitHub", href: "https://github.com/lovepreetkaurbuilds", icon: Github, description: "lovepreetkaurbuilds" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/lovepreetkaur10", icon: Linkedin, description: "lovepreetkaur10" },
+  { label: "Email", href: "mailto:lovepreetkaur090gsp@gmail.com", icon: Mail, description: "lovepreetkaur090gsp@gmail.com" },
+  { label: "Resume", href: "/Lovepreet_Kaur_Resume.pdf", icon: Download, description: "Download resume (coming soon)" },
 ];
 
 interface CommandPaletteProps {
@@ -49,17 +53,17 @@ export default function CommandPalette({ open, onClose }: CommandPaletteProps) {
     <AnimatePresence>
       {open && (
         <motion.div
-          key="command-palette-overlay"
+          key="cmd-overlay"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.15 }}
-          className="fixed inset-0 z-[80] bg-foreground/20 backdrop-blur-sm flex items-start justify-center pt-[20vh]"
+          className="fixed inset-0 z-[80] bg-foreground/20 backdrop-blur-sm flex items-start justify-center pt-[18vh]"
           onClick={onClose}
           data-testid="command-palette-overlay"
         >
           <motion.div
-            key="command-palette"
+            key="cmd-panel"
             initial={{ opacity: 0, y: -12, scale: 0.97 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -12, scale: 0.97 }}
@@ -68,26 +72,22 @@ export default function CommandPalette({ open, onClose }: CommandPaletteProps) {
             className="w-full max-w-lg mx-4"
             data-testid="command-palette"
           >
-            <Command
-              className="bg-card border border-border rounded-lg shadow-xl overflow-hidden"
-              shouldFilter={true}
-            >
+            <Command className="bg-card border border-border rounded-lg shadow-xl overflow-hidden" shouldFilter={true}>
               <div className="flex items-center gap-3 px-4 py-3 border-b border-border">
                 <Search size={14} className="text-muted-foreground shrink-0" />
                 <Command.Input
-                  placeholder="Navigate to..."
+                  placeholder="Go to section, open a link..."
                   className="flex-1 text-sm bg-transparent outline-none text-foreground placeholder:text-muted-foreground"
                   data-testid="command-palette-input"
+                  autoFocus
                 />
-                <kbd className="text-xs text-muted-foreground border border-border px-1.5 py-0.5 rounded">
-                  ESC
-                </kbd>
+                <kbd className="text-xs text-muted-foreground border border-border px-1.5 py-0.5 rounded">ESC</kbd>
               </div>
-              <Command.List className="max-h-72 overflow-y-auto p-2">
+              <Command.List className="max-h-80 overflow-y-auto p-2">
                 <Command.Empty className="py-6 text-center text-sm text-muted-foreground">
                   No results found.
                 </Command.Empty>
-                <Command.Group heading={<span className="text-xs font-medium text-muted-foreground tracking-wider uppercase px-2">Sections</span>}>
+                <Command.Group heading={<span className="text-xs font-medium text-muted-foreground tracking-wider uppercase px-2">Navigate</span>}>
                   {sections.map((s) => (
                     <Command.Item
                       key={s.id}
@@ -113,6 +113,7 @@ export default function CommandPalette({ open, onClose }: CommandPaletteProps) {
                     >
                       <l.icon size={13} className="text-muted-foreground" />
                       <span>{l.label}</span>
+                      <span className="ml-auto text-xs text-muted-foreground">{l.description}</span>
                     </Command.Item>
                   ))}
                 </Command.Group>

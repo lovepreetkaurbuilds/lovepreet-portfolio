@@ -1,14 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-
-const timelineEvents = [
-  { year: "2022", label: "First line of Python", note: "print('Hello, World') — and that was it." },
-  { year: "2023", label: "First real project", note: "Built something that actually solved a problem." },
-  { year: "2024", label: "Linux daily driver", note: "The terminal became home." },
-  { year: "2024", label: "Backend APIs", note: "FastAPI, SQL, real systems thinking." },
-  { year: "2025", label: "Automation & AI", note: "Connecting software to the physical world." },
-  { year: "2026", label: "Building in public", note: "This portfolio. More projects. Keep shipping." },
-];
+import { useMode } from "@/context/ModeContext";
 
 const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -16,9 +8,9 @@ const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.65, delay, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}
     </motion.div>
@@ -26,8 +18,7 @@ const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 };
 
 export default function WhyIBuild() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { isRecruiter } = useMode();
 
   return (
     <section id="why-i-build" className="py-28 md:py-36 px-6">
@@ -36,102 +27,84 @@ export default function WhyIBuild() {
           {/* Left — narrative */}
           <div>
             <FadeIn>
-              <div className="mb-6">
-                <span className="text-xs font-sans tracking-widest uppercase text-muted-foreground">
-                  01 — Identity
-                </span>
-              </div>
+              <span className="text-xs font-sans tracking-widest uppercase text-muted-foreground block mb-4">
+                02 — Identity
+              </span>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
                 Why I Build
               </h2>
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6 font-sans">
-                I don't learn to pass a course. I learn because a problem genuinely fascinates me — and the only way I know how to understand something deeply is to build it.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-5 font-sans">
+                I enjoy learning and building technology through projects and practical problem solving.
               </p>
             </FadeIn>
 
             <FadeIn delay={0.15}>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6 font-sans">
-                Software, systems, automation, AI — these aren't separate fields to me. They're different angles on the same question: how do you make something work reliably in the real world?
+              <p className="text-lg text-muted-foreground leading-relaxed mb-5 font-sans">
+                My interests span software, systems, automation, AI, and emerging technologies. I prefer learning by building and turning ideas into working solutions rather than only studying theory.
               </p>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6 font-sans">
-                Practical problem solving means you actually deploy things. You watch them fail. You understand why. You improve them. The cycle is the point, not the destination.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-5 font-sans">
+                I am interested in creating technology that solves real-world problems and contributes to making systems more efficient, accessible, and transparent. I enjoy exploring how technology can improve the way people work, make decisions, and interact with services and information.
               </p>
             </FadeIn>
 
-            <FadeIn delay={0.25}>
-              <p className="text-lg text-muted-foreground leading-relaxed font-sans">
-                Future technologies — AI, edge computing, IoT — matter most when they're connected to real human problems. A farm that burns down at night. A village with no way to report a broken road. A clinic that misses patients. These are the problems I want to build for.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={0.3}>
-              <div className="mt-10 flex flex-wrap gap-3">
-                {["Practical", "Curious", "Builder", "Systems Thinker", "Self-taught"].map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 text-xs font-sans border border-border text-muted-foreground rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </FadeIn>
+            {!isRecruiter && (
+              <FadeIn delay={0.25}>
+                <div className="mt-8 p-5 bg-card border border-border rounded-lg">
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed italic">
+                    Outside technology, I enjoy horses, cats, badminton, cricket, and travelling.
+                  </p>
+                </div>
+              </FadeIn>
+            )}
           </div>
 
-          {/* Right — timeline */}
-          <div ref={ref}>
+          {/* Right — positioning */}
+          <div>
             <FadeIn delay={0.05}>
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-8">
-                The Journey
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">
+                Core Positioning
               </h3>
             </FadeIn>
 
-            <div className="relative">
-              {/* Vertical line */}
-              <motion.div
-                className="absolute left-[11px] top-0 w-px bg-border"
-                initial={{ height: 0 }}
-                animate={inView ? { height: "100%" } : {}}
-                transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-              />
-
-              <div className="space-y-8">
-                {timelineEvents.map((event, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: -16 }}
-                    animate={inView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.5, delay: 0.4 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                    className="flex gap-6 items-start"
-                  >
-                    <div className="relative shrink-0 mt-1.5">
-                      <div className="w-[22px] h-[22px] rounded-full border-2 border-border bg-background flex items-center justify-center">
-                        <div className="w-2 h-2 rounded-full bg-accent" />
-                      </div>
-                    </div>
+            <div className="space-y-4">
+              {[
+                { label: "Technology Builder in Progress", desc: "Growing through education, real work, self-learning, and projects" },
+                { label: "Practical Problem Solver", desc: "Interested in real-world problems, not just academic exercises" },
+                { label: "Systems Thinker", desc: "Software, systems, and automation are connected — I learn across all of them" },
+                { label: "Honest Builder", desc: "No inflated claims. Building proof through real code and documented projects" },
+              ].map((item, i) => (
+                <FadeIn key={item.label} delay={0.1 + i * 0.08}>
+                  <div className="flex gap-4 p-4 bg-card border border-border rounded-lg hover:border-accent/30 transition-colors">
+                    <div className="w-1 shrink-0 bg-accent rounded-full mt-1" />
                     <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <span className="text-xs font-mono text-accent tracking-wider">
-                          {event.year}
-                        </span>
-                        <span className="font-sans font-semibold text-sm text-foreground">
-                          {event.label}
-                        </span>
-                      </div>
-                      <p className="text-sm text-muted-foreground font-sans">
-                        {event.note}
-                      </p>
+                      <div className="font-sans font-semibold text-sm text-foreground mb-1">{item.label}</div>
+                      <div className="text-xs text-muted-foreground font-sans">{item.desc}</div>
                     </div>
-                  </motion.div>
-                ))}
-              </div>
+                  </div>
+                </FadeIn>
+              ))}
             </div>
+
+            <FadeIn delay={0.45}>
+              <div className="mt-8">
+                <div className="text-xs font-sans tracking-widest uppercase text-muted-foreground mb-3">
+                  Interests
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {["Software", "Systems", "Automation", "AI", "IoT", "Real-World Problems", "Open Source", "Future Technology"].map((tag) => (
+                    <span key={tag} className="px-3 py-1 text-xs font-sans border border-border text-muted-foreground rounded hover:border-accent hover:text-accent transition-colors">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </div>
