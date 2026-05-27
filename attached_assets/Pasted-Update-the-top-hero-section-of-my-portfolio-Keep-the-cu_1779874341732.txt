@@ -1,0 +1,77 @@
+Update the top hero section of my portfolio.
+
+Keep the current premium, elegant design, but make these improvements:
+
+1. Update the top badge text.
+
+Current:
+COMPUTER PROGRAMMER GRADUATE · OPEN TO WORK · CANADA
+
+Change to:
+COMPUTER PROGRAMMER GRADUATE · OPEN TO WORK · CANADA · INDIA · REMOTE
+
+Also add a small tooltip or subtle note near the Open To Work section later:
+“Open to U.S. opportunities depending on role, sponsorship, or work authorization requirements.”
+
+Do not write “USA” in a way that makes it look like I already have U.S. work authorization.
+
+2. Improve the hero headline responsiveness.
+
+Current headline:
+Building Practical Technology Through Learning, Work, and Real Projects
+
+Keep the same headline, but:
+- Make it slightly smaller on laptop screens
+- Make it much more readable on mobile
+- Prevent awkward line breaks
+- Use max-width so it feels elegant
+- Keep the premium serif style
+
+3. Improve the rotating keyword under the headline.
+
+Instead of only showing “AI”, rotate these words:
+- Software
+- Systems
+- Automation
+- AI
+- Real Projects
+- Problem Solving
+- Documentation
+- Self-Learning
+
+Make the animation smooth and minimal.
+
+4. Keep this subheadline:
+
+I am a Computer Programmer graduate building skills through software projects, systems practice, automation experiments, and real-world problem solving.
+
+But make sure the line spacing is comfortable and the text is not too wide.
+
+5. Check all top buttons.
+
+Buttons:
+- View My Work → scroll to Projects section
+- See My Journey → scroll to Journey section
+- GitHub → open https://github.com/lovepreetkaurbuilds in a new tab
+- LinkedIn → open https://www.linkedin.com/in/lovepreetkaur10 in a new tab
+- Contact → open mailto:lovepreetkaur090gsp@gmail.com
+
+6. Navigation menu should include:
+- Journey
+- Projects
+- Toolkit
+- Experience
+- Contact
+
+7. Keep the Builder View button and command palette button, but make sure they look clean and aligned.
+
+8. Mobile fixes:
+- Navbar should collapse nicely
+- Hero headline should not be too huge
+- Buttons should wrap neatly
+- No button should go off-screen
+- The layout should still feel premium on phone
+
+9. Do not change the overall design direction.
+It already looks good.
+Only improve truthfulness, responsiveness, open-to-work locations, and button behavior.

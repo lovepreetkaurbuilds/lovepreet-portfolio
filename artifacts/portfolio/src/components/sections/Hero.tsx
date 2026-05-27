@@ -4,7 +4,7 @@ import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 
 const rotatingKeywords = [
   "Software", "Systems", "Automation", "AI",
-  "Problem Solving", "Self-Learning", "Documentation", "Real Projects"
+  "Real Projects", "Problem Solving", "Documentation", "Self-Learning"
 ];
 
 export default function Hero() {
@@ -72,7 +72,7 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
 
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-5 sm:px-8 w-full max-w-5xl mx-auto">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -80,10 +80,10 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 1.8 }}
           className="mb-8 flex justify-center"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 border border-accent/30 rounded-full">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            <span className="text-xs font-sans text-muted-foreground tracking-widest uppercase">
-              Computer Programmer Graduate · Open to Work · Canada
+          <div className="inline-flex items-center gap-2 px-3 py-1 border border-accent/30 rounded-full flex-wrap justify-center">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0" />
+            <span className="text-xs font-sans text-muted-foreground tracking-widest uppercase text-center">
+              Computer Programmer Graduate · Open to Work · Canada · India · Remote
             </span>
           </div>
         </motion.div>
@@ -93,12 +93,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.0, ease: [0.16, 1, 0.3, 1] }}
-          className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight mb-6"
+          className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.15] tracking-tight mb-6 max-w-4xl mx-auto"
         >
           Building Practical Technology
-          <br />
+          <br className="hidden sm:block" />
+          {" "}
           <span className="text-foreground/70">Through Learning, Work,</span>
-          <br />
+          <br className="hidden sm:block" />
+          {" "}
           <span className="text-foreground/70">and Real Projects</span>
         </motion.h1>
 
@@ -128,7 +130,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 2.4, ease: [0.16, 1, 0.3, 1] }}
-          className="text-lg md:text-xl text-muted-foreground font-sans leading-relaxed max-w-2xl mx-auto mb-12"
+          className="text-base sm:text-lg text-muted-foreground font-sans leading-loose max-w-xl mx-auto mb-10 sm:mb-12"
         >
           I am a Computer Programmer graduate building skills through software projects, systems practice, automation experiments, and real-world problem solving.
         </motion.p>
@@ -138,7 +140,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 2.6, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-wrap items-center justify-center gap-3"
+          className="flex flex-wrap items-center justify-center gap-2 sm:gap-3"
         >
           <button
             onClick={() => scroll("#project-lab")}
